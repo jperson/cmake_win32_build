@@ -1,6 +1,6 @@
 name: CMake Build Matrix
 
-on: [push, pull_request]
+on: [workflow_dispatch]
 
 env:
   CMAKE_VERSION: 3.23.0
