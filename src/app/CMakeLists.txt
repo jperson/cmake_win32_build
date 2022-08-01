@@ -6,16 +6,25 @@ add_executable(${PROJECT_NAME} ./src/main.cpp)
 find_package(spdlog)
 
 # linking against the desired targets
+IF (WIN32)
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
     project_options
     project_warnings
     PUBLIC
     spdlog::spdlog
-    #Boost::log
-    dbgcam
     pvcam_incl
     pvcam64)
+ELSE()
+target_link_libraries(${PROJECT_NAME}
+    PRIVATE
+    project_options
+    project_warnings
+    PUBLIC
+    spdlog::spdlog
+    pvcam_incl
+    dbgcam)
+ENDIF()
 
 
 install(TARGETS ${PROJECT_NAME}

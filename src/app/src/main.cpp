@@ -8,5 +8,6 @@
 int main(int argc, char* argv[]) {
     //BOOST_LOG_TRIVIAL(info) << "Running";
     spdlog::info("Running");
-    pl_pvcam_init();
+    rs_bool result = pl_pvcam_init();
+    spdlog::info("pl_pvcam_init: {}", result);
 }
