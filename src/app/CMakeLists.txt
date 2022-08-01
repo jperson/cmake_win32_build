@@ -2,7 +2,8 @@
 add_executable(${PROJECT_NAME} ./src/main.cpp)
 
 # Dependencies
-find_package(Boost COMPONENTS log REQUIRED)
+#find_package(Boost COMPONENTS log REQUIRED)
+find_package(spdlog)
 
 # linking against the desired targets
 target_link_libraries(${PROJECT_NAME}
@@ -10,7 +11,8 @@ target_link_libraries(${PROJECT_NAME}
     project_options
     project_warnings
     PUBLIC
-    Boost::log
+    spdlog::spdlog
+    #Boost::log
     dbgcam
     pvcam)
 

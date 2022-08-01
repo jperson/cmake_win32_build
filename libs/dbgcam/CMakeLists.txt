@@ -8,7 +8,8 @@ target_include_directories(dbgcam
     PUBLIC include
     PRIVATE src)
 
-find_package(Boost COMPONENTS log REQUIRED)
+#find_package(Boost COMPONENTS log REQUIRED)
+find_package(spdlog)
 
 # linking against the desired targets
 target_link_libraries(dbgcam
@@ -16,7 +17,8 @@ target_link_libraries(dbgcam
     project_options
     project_warnings
     pvcam
-    Boost::log)
+    spdlog::spdlog)
+#Boost::log)
 
 install(TARGETS dbgcam
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}/
