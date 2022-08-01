@@ -13,4 +13,4 @@ file(COPY bin/amd64/libpvcam64.lib
 # ADD_CUSTOM_COMMAND(OUTPUT pvcam64
 #     COMMAND cp bin/amd64/pcvam64.lib "{CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libpvcam64.lib")
 
-install(FILES "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libpvcam64.lib" TYPE LIBRARY)
+install(FILES "${CMAKE_LIBRARY_OUTPUT_DIRECTORY}/libpvcam64.lib" TYPE LIB)
