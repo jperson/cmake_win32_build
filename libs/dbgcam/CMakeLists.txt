@@ -8,7 +8,7 @@ target_include_directories(dbgcam
     PUBLIC include
     PRIVATE src)
 
-find_package(Boost)
+find_package(Boost COMPONENTS log REQUIRED)
 
 # linking against the desired targets
 target_link_libraries(dbgcam

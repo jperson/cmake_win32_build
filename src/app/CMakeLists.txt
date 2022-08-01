@@ -1,6 +1,8 @@
 # setting up sources
 add_executable(${PROJECT_NAME} ./src/main.cpp)
-find_package(Boost)
+
+# Dependencies
+find_package(Boost COMPONENTS log REQUIRED)
 
 # linking against the desired targets
 target_link_libraries(${PROJECT_NAME}

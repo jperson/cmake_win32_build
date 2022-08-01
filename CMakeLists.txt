@@ -25,8 +25,6 @@ conan_cmake_run(
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
 
-# Dependencies
-find_package(Boost)
 
 # set(THREADS_PREFER_PTHREAD_FLAG ON)
 # find_package(Threads REQUIRED)
