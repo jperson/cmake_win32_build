@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 project(foo LANGUAGES CXX C VERSION 1.0)
 set(PROJECT_BRIEF "Foo app")
+SET(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+
 
 # get conan.cmake
 if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
