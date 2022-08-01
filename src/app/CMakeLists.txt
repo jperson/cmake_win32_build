@@ -14,7 +14,8 @@ target_link_libraries(${PROJECT_NAME}
     spdlog::spdlog
     #Boost::log
     dbgcam
-    pvcam)
+    pvcam_incl
+    pvcam64)
 
 
 install(TARGETS ${PROJECT_NAME}

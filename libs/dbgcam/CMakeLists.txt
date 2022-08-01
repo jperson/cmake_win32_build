@@ -16,9 +16,10 @@ target_link_libraries(dbgcam
     PRIVATE
     project_options
     project_warnings
-    pvcam
+    pvcam_incl
     spdlog::spdlog)
 #Boost::log)
+
 
 install(TARGETS dbgcam
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}/
